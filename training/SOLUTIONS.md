@@ -8,7 +8,13 @@
   terms of the Apache License Version 2.0 which is available at
   https://www.apache.org/licenses/LICENSE-2.0
 
-  SPDX-License-Identifier: Apache-2.0
+  AI Disclosure: This file was largely AI-generated. The AI-generated
+  portions are made available under CC0-1.0 and not subject to the
+  project's licence. The human contributor has reviewed and verified
+  that the content is correct.
+
+  SPDX-License-Identifier: Apache-2.0 AND CC0-1.0
+  Assisted-by: Claude Code (claude-opus-5-5)
 ----------------------------------------------------------------------------- -->
 
 # Training solutions
