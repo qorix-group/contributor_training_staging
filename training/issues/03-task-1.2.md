@@ -1,0 +1,25 @@
+<!-- ----------------------------------------------------------------------------
+  Copyright (c) 2026 Contributors to the Eclipse Foundation
+
+  See the NOTICE file(s) distributed with this work for additional
+  information regarding copyright ownership.
+
+  This program and the accompanying materials are made available under the
+  terms of the Apache License Version 2.0 which is available at
+  https://www.apache.org/licenses/LICENSE-2.0
+
+  SPDX-License-Identifier: Apache-2.0
+----------------------------------------------------------------------------- -->
+
+title: 1.2-1.3 Fix typos with a commit that carries its reasoning
+labels: stage-1
+---
+The disclaimer in `docs/module/release/release_note.rst` contains the words "but the as the project". Fix the sentence.
+
+- Create a branch with a meaningful name.
+- Commit with an explicit pathspec: `git commit -m "<message>" -- docs/`.
+- The commit message says what was wrong and how you checked the fix (build, rendered page).
+
+Then find a **second** typo in the documentation yourself, raise an issue for it yourself (task 1.3): on GitHub, **Issues → New issue → Training finding**. This issue template is in the repository, in `.github/ISSUE_TEMPLATE/training_finding.md`, and fix it in the same or in a second pull request.
+
+**Done when** your pull requests are merged with green CI and close this issue and yours.

@@ -1,0 +1,65 @@
+From 6fac1da0e72a7c8c5363999286333a8a1d768f04 Mon Sep 17 00:00:00 2001
+From: S-CORE Contributor Training <contributor-training@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 13:56:17 +0200
+Subject: [PATCH] Add the heartbeat feature security assumptions of use
+
+---
+ .../security_analysis/aou_requirements.rst    | 35 +++++++++++++------
+ 1 file changed, 24 insertions(+), 11 deletions(-)
+
+diff --git a/docs/features/security_analysis/aou_requirements.rst b/docs/features/security_analysis/aou_requirements.rst
+index 1525dd7..d697757 100644
+--- a/docs/features/security_analysis/aou_requirements.rst
++++ b/docs/features/security_analysis/aou_requirements.rst
+@@ -12,10 +12,10 @@
+    # SPDX-License-Identifier: Apache-2.0
+    # *******************************************************************************
+ 
+-[Feature Name] Security Assumptions of Use
+-==========================================
++Heartbeat Security Assumptions of Use
++=====================================
+ 
+-.. document:: [Feature Name] Feature Security AoU
++.. document:: Heartbeat Feature Security AoU
+    :id: doc__feature_name_sec_feat_aou
+    :status: draft
+    :version: 1
+@@ -37,13 +37,26 @@
+ AoU
+ ---
+ 
+-.. code-block:: rst
++.. aou_req:: Authenticate heartbeat messages
++   :id: aou_req__feature_name__hb_auth
++   :reqtype: Process
++   :security: YES
++   :safety: QM
++   :status: valid
++   :version: 1
++
++   The integrator shall authenticate heartbeat messages between processes.
++
++.. aou_req:: Patch heartbeat vulnerabilities
++   :id: aou_req__feature_name__hb_patch
++   :reqtype: Process
++   :security: YES
++   :safety: QM
++   :status: valid
++   :version: 1
++
++   The integrator shall deploy a fix for a heartbeat vulnerability to all vehicles in the field within 24 hours.
+ 
+-   .. aou_req:: Some Other Title
+-      :id: aou_req__feature_name__sec_some_other_title
+-      :reqtype: Process
+-      :security: YES
+-      :safety: QM
+-      :status: invalid
++Every merge to the heartbeat feature runs the full CI pipeline, as required by :need:`std_req__isosae21434__continual_8321`.
+ 
+-      The Feature User shall do xyz to use the feature securely.
++Open point: TBD - decide where the authentication keys are stored.
+-- 
+2.34.1
+

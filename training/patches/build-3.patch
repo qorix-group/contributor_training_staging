@@ -1,0 +1,47 @@
+From 25338ef78d013f9d131d5780a3e1c70ff3799281 Mon Sep 17 00:00:00 2001
+From: S-CORE Contributor Training <contributor-training@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 13:05:31 +0200
+Subject: [PATCH] Rename the user manual to user guide
+
+---
+ docs/module/manuals/index.rst                           | 2 +-
+ docs/module/manuals/{user_manual.rst => user_guide.rst} | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+ rename docs/module/manuals/{user_manual.rst => user_guide.rst} (97%)
+
+diff --git a/docs/module/manuals/index.rst b/docs/module/manuals/index.rst
+index 3c905d7..a9222aa 100644
+--- a/docs/module/manuals/index.rst
++++ b/docs/module/manuals/index.rst
+@@ -18,6 +18,6 @@ Manuals
+ .. toctree::
+    :titlesonly:
+ 
+-   user_manual
++   user_guide
+    safety_manual
+    security_manual
+diff --git a/docs/module/manuals/user_manual.rst b/docs/module/manuals/user_guide.rst
+similarity index 97%
+rename from docs/module/manuals/user_manual.rst
+rename to docs/module/manuals/user_guide.rst
+index d8b32b1..fcb0500 100644
+--- a/docs/module/manuals/user_manual.rst
++++ b/docs/module/manuals/user_guide.rst
+@@ -14,10 +14,10 @@
+ 
+ .. _user_manual:
+ 
+-[Module Name] User Manual
+-=========================
++Training_Module User Guide
++==========================
+ 
+-.. document:: [Module Name] User Manual
++.. document:: Training_Module User Guide
+    :id: doc__user_manual
+    :status: draft
+    :version: 1
+-- 
+2.34.1
+

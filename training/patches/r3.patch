@@ -1,0 +1,35 @@
+From be3444aeb6a6a1496ff1cf4ddf8ea0f0c29c0d1e Mon Sep 17 00:00:00 2001
+From: S-CORE Contributor Training <contributor-training@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 13:29:34 +0200
+Subject: [PATCH] Name the module in the user manual and tidy the environment
+ list
+
+---
+ docs/module/manuals/user_manual.rst | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/docs/module/manuals/user_manual.rst b/docs/module/manuals/user_manual.rst
+index d8b32b1..b5a5061 100644
+--- a/docs/module/manuals/user_manual.rst
++++ b/docs/module/manuals/user_manual.rst
+@@ -32,7 +32,7 @@
+ Overview
+ ========
+ 
+-This user manual provides comprehensive guidance for using the [Your Module Name] module from an end customer perspective.
++This user manual provides comprehensive guidance for using the Training_Module module from an end customer perspective.
+ It covers installation, configuration, basic usage, and best practices for integrating this module
+ into your project.
+ 
+@@ -47,7 +47,7 @@ Environment Needs
+ Basic needed software environment for the module development and usage:
+ 
+ * **C++**: C++17 or later
+-* **Rust**: 1.70 or later (if Rust support is included)
++* **Rust**: 1.70 or later
+ * **Build System**: Bazel 6.0 or later
+ * **Operating Systems**: Linux, QNX
+ 
+-- 
+2.34.1
+

@@ -1,0 +1,15 @@
+{
+  "patch": "r3.patch",
+  "comments": [
+    {
+      "path": "docs/module/manuals/user_manual.rst",
+      "line_text": "* **Build System**: Bazel 6.0 or later",
+      "body": "`.bazelversion` pins Bazel 8.7.0. \"6.0 or later\" promises support for versions nobody builds with. Please state the version we actually use."
+    },
+    {
+      "path": "docs/module/manuals/user_manual.rst",
+      "line_text": "* **Operating Systems**: Linux, QNX",
+      "body": "Training_Module does not support QNX. Please change this to \"Linux\" only."
+    }
+  ]
+}

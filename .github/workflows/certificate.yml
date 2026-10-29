@@ -1,0 +1,48 @@
+# *******************************************************************************
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+
+# The last step of the onboarding training. Run by hand once every issue is closed: it checks that
+# each one was closed by a merged pull request and, if so, issues the certificate of completion as
+# a downloadable artifact. Otherwise it lists what still blocks it and fails.
+name: Certificate
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Your full name, as it shall appear on the certificate
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  certificate:
+    name: 🎓 Certificate of completion
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Check out
+        uses: actions/checkout@v7
+      - name: 🎓 Check the training and issue the certificate
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          NAME: ${{ inputs.name }}
+        run: python3 .github/certificate/certificate.py "$NAME" "${{ github.actor }}" --output "certificate_${{ github.actor }}.pdf"
+      - name: 📤 Upload the certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: certificate
+          path: certificate_${{ github.actor }}.pdf
+          retention-days: 90

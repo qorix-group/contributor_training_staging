@@ -1,0 +1,35 @@
+# *******************************************************************************
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+name: Feedback
+description: Tell the maintainers what should be better in the contributor training
+labels: [feedback]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open this in **eclipse-score/contributor_training**, not in your copy: nobody else can see your copy.
+        The maintainers read every feedback and improve the training. **There is no support**: for questions about S-CORE itself, see "Feedback, bugs and questions" in TRAINING.md.
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      options: [quality, safety, security, not started yet]
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What should be better
+      description: One point per line. Say where (task, file, step) and what you expected.
+    validations:
+      required: true

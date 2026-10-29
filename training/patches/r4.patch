@@ -1,0 +1,54 @@
+From 62f2b17c7257c8e6cf0df3e880d5cb108fbe93fc Mon Sep 17 00:00:00 2001
+From: S-CORE Contributor Training <contributor-training@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 13:55:09 +0200
+Subject: [PATCH] Use 'followed by' in the id instructions of the module
+ documents
+
+---
+ docs/module/release/release_note.rst              | 2 +-
+ docs/module/safety_mgt/module_safety_plan.rst     | 2 +-
+ docs/module/security_mgt/module_security_plan.rst | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/docs/module/release/release_note.rst b/docs/module/release/release_note.rst
+index d506fa3..f2ceb0d 100644
+--- a/docs/module/release/release_note.rst
++++ b/docs/module/release/release_note.rst
+@@ -30,7 +30,7 @@
+     The above directive must be updated according to your Module.
+ 
+     - Modify ``Your Module Name`` to be your Module Name
+-    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and succeeded by ``release_note``
++    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and followed by ``release_note``
+     - Adjust ``status`` to be ``valid``
+     - Adjust ``safety`` and ``tags`` according to your needs
+ 
+diff --git a/docs/module/safety_mgt/module_safety_plan.rst b/docs/module/safety_mgt/module_safety_plan.rst
+index e6e21e8..1c58835 100644
+--- a/docs/module/safety_mgt/module_safety_plan.rst
++++ b/docs/module/safety_mgt/module_safety_plan.rst
+@@ -30,7 +30,7 @@
+     The above directive must be updated according to your Module.
+ 
+     - Modify ``Your Module Name`` to be your Module Name
+-    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and succeeded by ``safety_plan``
++    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and followed by ``safety_plan``
+     - Adjust ``status`` to be ``valid``
+     - Adjust ``safety`` and ``tags`` according to your needs
+ 
+diff --git a/docs/module/security_mgt/module_security_plan.rst b/docs/module/security_mgt/module_security_plan.rst
+index 32f0908..1d78121 100644
+--- a/docs/module/security_mgt/module_security_plan.rst
++++ b/docs/module/security_mgt/module_security_plan.rst
+@@ -30,7 +30,7 @@
+     The above directive must be updated according to your Module.
+ 
+     - Modify ``Your Module Name`` to be your Module Name
+-    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and succeeded by ``security_plan``
++    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and followed by ``security_plan``
+     - Adjust ``status`` to be ``valid``
+     - Adjust ``safety`` and ``tags`` according to your needs
+ 
+-- 
+2.34.1
+

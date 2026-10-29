@@ -1,0 +1,54 @@
+# *******************************************************************************
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+name: Training completed
+description: Record that you completed the contributor training
+title: "Training completed: <track>"
+labels: [training-completed]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open this in **eclipse-score/contributor_training** once the Certificate workflow in your copy has issued your certificate. This issue is the public record that you did the training. It is visible to everyone.
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      options: [quality, safety, security]
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date of the certificate
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit on the certificate
+      description: The short commit the certificate names ("Issued … at commit …")
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Anything the maintainers should know
+      description: Optional. Larger points are better as a separate Feedback issue.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I worked through every stage of the training myself, and the Certificate workflow issued my certificate.
+          required: true

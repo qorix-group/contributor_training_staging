@@ -1,0 +1,50 @@
+From 72ebae0164521904f85079e151d48a8fcd9ed7e1 Mon Sep 17 00:00:00 2001
+From: S-CORE Contributor Training <contributor-training@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 13:00:16 +0200
+Subject: [PATCH] Add heartbeat status requirement and update the manual
+ reference
+
+---
+ docs/module/manuals/user_manual.rst                  |  2 +-
+ .../docs/requirements/requirements.rst               | 12 ++++++++++++
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+
+diff --git a/docs/module/manuals/user_manual.rst b/docs/module/manuals/user_manual.rst
+index d8b32b1..5e2908a 100644
+--- a/docs/module/manuals/user_manual.rst
++++ b/docs/module/manuals/user_manual.rst
+@@ -118,7 +118,7 @@ Integrating with Your Project
+ Version History, Compatibility, and Troubleshooting
+ ===================================================
+ 
+-For comprehensive information on the following topics, refer to :need:`doc__mod_temp_module_name_release_note`:
++For comprehensive information on the following topics, refer to :need:`doc__training_module_release_note`:
+ 
+ * Version history and changes
+ * Compatibility notes and upgrade instructions
+diff --git a/score/component_example/docs/requirements/requirements.rst b/score/component_example/docs/requirements/requirements.rst
+index ed91903..c209466 100644
+--- a/score/component_example/docs/requirements/requirements.rst
++++ b/score/component_example/docs/requirements/requirements.rst
+@@ -64,6 +64,18 @@ Functional Requirements
+     - Set the status to valid and start the review/merge process
+     - Add other needed requirements for your component
+ 
++.. comp_req:: Report heartbeat status
++   :id: comp_req__component_example__heartbeat_status
++   :reqtype: Functional
++   :security: NO
++   :safety: QM
++   :derived_from: feat_req__example_feature__example_req
++   :satisfied_by: comp__mod_temp_component_example_1
++   :status: valid
++   :version: 1
++
++   The Component shall report its heartbeat status to the module once per cycle.
++
+ Assumption of Use Requirements
+ ------------------------------
+ 
+-- 
+2.34.1
+

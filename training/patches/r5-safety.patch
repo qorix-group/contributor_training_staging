@@ -1,0 +1,66 @@
+From 259f859df0428f4f9c031fe8a9222d22d8f93c56 Mon Sep 17 00:00:00 2001
+From: S-CORE Contributor Training <contributor-training@users.noreply.github.com>
+Date: Wed, 14 Oct 2026 13:56:05 +0200
+Subject: [PATCH] Add the heartbeat feature assumptions of use
+
+---
+ .../safety_analysis/aou_requirements.rst      | 35 ++++++++++++-------
+ 1 file changed, 23 insertions(+), 12 deletions(-)
+
+diff --git a/docs/features/safety_analysis/aou_requirements.rst b/docs/features/safety_analysis/aou_requirements.rst
+index 62c0bbf..a5cc590 100644
+--- a/docs/features/safety_analysis/aou_requirements.rst
++++ b/docs/features/safety_analysis/aou_requirements.rst
+@@ -12,12 +12,12 @@
+    # SPDX-License-Identifier: Apache-2.0
+    # *******************************************************************************
+ 
+-[Feature Name] Assumptions of Use
+-=================================
++Heartbeat Assumptions of Use
++============================
+ 
+-.. document:: [Feature Name] Feature AoU
++.. document:: Heartbeat Feature AoU
+    :id: doc__feature_name_feat_aou
+-   :status: draft
++   :status: valid
+    :version: 1
+    :safety: ASIL_B
+    :security: NO
+@@ -37,13 +37,24 @@
+ AoU
+ ---
+ 
+-.. code-block:: rst
++.. aou_req:: Restart a failed component
++   :id: aou_req__feature_name__hb_restart
++   :reqtype: Process
++   :security: NO
++   :safety: ASIL_B
++   :status: valid
++   :version: 1
++
++   The integrator shall restart a component whose heartbeat is missing within 1 microsecond.
++
++.. aou_req:: Configure the heartbeat period
++   :id: aou_req__feature_name__hb_period
++   :reqtype: Process
++   :security: NO
++   :safety: ASIL_B
++   :status: valid
++   :version: 1
+ 
+-   .. aou_req:: Some Other Title
+-      :id: aou_req__feature_name__some_other_title
+-      :reqtype: Process
+-      :security: NO
+-      :safety: ASIL_B
+-      :status: invalid
++   The integrator shall configure a heartbeat period of TBD ms.
+ 
+-      The Feature User shall do xyz to use the feature safely.
++No further Assumptions of Use are needed; we agreed on this with the integrator in the call on 2026-10-22.
+-- 
+2.34.1
+
