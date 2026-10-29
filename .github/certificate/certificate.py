@@ -37,7 +37,7 @@ STAGES = [
     ("Build", "clean documentation build, defect branches repaired"),
     ("Process", "the process behind a work product, project decisions"),
     ("Review", "form and content review, answering a review"),
-    ("Module", "template update with rebase, role document filled in"),
+    ("Module", "template update with rebase, track document filled in"),
     ("Wrap-up", "cross-review, formal document review, retrospective"),
 ]
 ROLES = {"quality": "Quality", "safety": "Safety", "security": "Security"}

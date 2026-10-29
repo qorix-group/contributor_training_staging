@@ -26,6 +26,9 @@ All results below were checked on 2026-10-14 against the initial state of the tr
 (module_template `b60778b`, score_docs_as_code 8.4.0). Warnings are treated as errors, so every
 docs warning fails `bazel run //:docs`.
 
+Re-checked 2026-10-29 on the first commit of the S-CORE version (`4dc60d8`): `main` builds
+green, and every defect branch shows exactly the messages and the `_build` content below.
+
 ### `defect/build-1` (task 2.2) — two issues expected
 
 | Defect | What the build says | Expected fix |
@@ -113,6 +116,9 @@ stages 1-4 (typo fix, build-1 and build-2 with fixes, r1 with fixes, r2, r3 with
 r5-security); then for each track document a branch with the #198 change; #R4 applied to `main`
 cleanly; rebasing each branch onto it conflicted in its own file - release note, module safety
 plan, module security plan.
+
+Re-checked 2026-10-29 on `4dc60d8` with `main` + r1, r2, r3, r5-security, then r4: the same
+three conflicts.
 
 ### PR #R5 (task 6.1) — cross-review
 
