@@ -24,7 +24,7 @@ Your document: **{{ROLE_DOC}}**. Do this task **before** you fill the document i
 
 **5.1 Find the deviation.** Compare your document with the module template it came from: `git fetch upstream`, then `git diff main upstream/main -- <your file>`. Which template commit is your document missing? Raise an issue for it with the "Training finding" template (on GitHub: **Issues → New issue → Training finding**).
 
-**5.2 Update on a branch.** Create a branch from `main`, bring the document to the current template state, commit, push and open a pull request that closes your issue and this one. **Do not merge it yet.**
+**5.2 Update on a branch.** Create a branch from `main`, bring the document to the current template state, commit, push and open a pull request that closes your issue and this one. A template commit can change more than your document: if the build fails after your update, find out from the template commit why, and repair it in the same pull request. **Do not merge it yet.**
 
 **5.3 A colleague was faster.** While your pull request was open, pull request #{{PR_R4}} changed the same file. Merge #{{PR_R4}} into `main` now. Then bring your branch up to date **by rebasing** onto `main`, resolve the conflict in VS Code's merge editor and push with `git push --force-with-lease`. When you resolve the conflict, decide which side is right. Do not just pick one.
 

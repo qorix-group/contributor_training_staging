@@ -151,5 +151,18 @@ These are on `main` (PR #3) and therefore in every participant repository from t
 | Security | Module security plan, tailoring | Cybersecurity assessment tailored out with reference `std_req__isosae21434__assessment_15621` | The stem "assessment" belongs to clause 15 (TARA methods); the cybersecurity assessment is clause 6.4.9 (`prj_management_649x`) |
 
 The template defect for tasks 5.1-5.3: `docs/` and `score/component_example/docs/` are at the parent
-of module_template `775aad3c` (#198); `git diff upstream/main -- docs` against the public template
-shows the difference.
+of module_template `775aad3c` (#198), except the quick-start commands in `docs/index.rst`, which
+are taken from #218; `git diff upstream/main -- docs` against the public template shows the
+difference.
+
+The template commit does more than the participant's document. #198 also renames the user manual's
+id from `doc__user_manual` to `doc__mod_temp_module_name_user_manual`, and the safety and security
+plans it brings refer to the new id. A Safety or Security participant who updates only the plan gets
+`linked need doc__mod_temp_module_name_user_manual not found`. Expected reaction: read #198, take its
+id change in `user_manual.rst` into the same pull request, and check that nothing else refers to the
+old id. The Quality documents at #198 build without it. Checked 2026-10-29 by a clean build of each
+track's documents at `775aad3c`: quality green, safety and security with exactly this warning.
+
+Task 6.2: Safety and Security review their plan with the module's FDR checklist; the module has none
+for the verification report or the release note, so Quality uses the process description's
+`gd_chklst__review_checklist`.

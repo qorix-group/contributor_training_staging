@@ -109,7 +109,7 @@ Integrating with Your Project
 
       cc_library(
           name = "my_target",
-          deps = ["@module_template//score/component_example:component"],
+          deps = ["@module_template//score/component_example:component_example"],
       )
 
 3. Include headers and compile your code

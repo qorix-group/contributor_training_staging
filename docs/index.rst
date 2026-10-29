@@ -111,7 +111,7 @@ To build the entire module:
 
 .. code-block:: bash
 
-   bazel build //src/...
+   bazel build //score/...
 
 To run all tests:
 
@@ -119,17 +119,23 @@ To run all tests:
 
    bazel test //...
 
-To run only unit tests:
+To run only the unit tests of a component (example):
 
 .. code-block:: bash
 
-   bazel test //src/...
+   bazel test //score/component_example:component_example_unit_tests
 
-To run only component or feature integration tests:
+To run only the component integration tests of a component (example):
 
 .. code-block:: bash
 
-   bazel test //tests/...
+   bazel test //score/component_example:component_example_component_integration_tests
+
+To run only feature integration tests:
+
+.. code-block:: bash
+
+   bazel test //score/tests/...
 
 
 Module Build Configuration

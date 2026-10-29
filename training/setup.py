@@ -70,16 +70,20 @@ ROLES = {
         "ROLE_TOPIC": "the module verification report",
         "ROLE_DOC": "the module verification report, `docs/verification_report/module_verification_report.rst`,"
         " and the release note, `docs/module/release/release_note.rst`",
+        "ROLE_CHECKLIST": "the Quality Work Product Review Checklist of the process description"
+        " (`gd_chklst__review_checklist`)",
         "r5": "r5-safety",
     },
     "safety": {
         "ROLE_TOPIC": "the FMEA",
         "ROLE_DOC": "the module safety plan, `docs/module/safety_mgt/module_safety_plan.rst`",
+        "ROLE_CHECKLIST": "the module's checklist for it, `docs/module/safety_mgt/module_safety_plan_fdr.rst`",
         "r5": "r5-security",
     },
     "security": {
         "ROLE_TOPIC": "the security analysis (threat analysis and risk assessment)",
         "ROLE_DOC": "the module security plan, `docs/module/security_mgt/module_security_plan.rst`",
+        "ROLE_CHECKLIST": "the module's checklist for it, `docs/module/security_mgt/module_security_plan_fdr.rst`",
         "r5": "r5-safety",
     },
 }
@@ -288,7 +292,7 @@ def main() -> int:
                 print(f"  review comments on lines {[c['line'] for c in comments]}")
             print(f"pull request #{numbers[f'PR_{key}']} {branch}: {title}")
 
-        values = {**numbers, "ROLE_TOPIC": role["ROLE_TOPIC"], "ROLE_DOC": role["ROLE_DOC"]}
+        values = {**numbers, **{k: v for k, v in role.items() if k.startswith("ROLE_")}}
         for path in sorted((HERE / "issues").glob("*.md")):
             title, labels, body = render_issue(path, values)
             labels.append(args.role)

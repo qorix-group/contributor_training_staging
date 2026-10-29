@@ -56,6 +56,7 @@ A track is an entry in `ROLES` in `setup.py` and a label in `LABELS`:
 
 * `ROLE_TOPIC`: the topic for task 3.2,
 * `ROLE_DOC`: the document the participant fills in in task 5.4,
+* `ROLE_CHECKLIST`: the checklist for the formal review of that document in task 6.2,
 * `r5`: the cross-review pull request (6.1) of another track.
 
 Then add the track's defects to the module's documents (one per track is enough, see
