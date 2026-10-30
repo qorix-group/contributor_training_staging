@@ -22,7 +22,7 @@ labels: stage-5
 ---
 Your document: **{{ROLE_DOC}}**. Do this task **before** you fill the document in (task 5.4). Follow the steps in this order; the order is part of the task.
 
-**5.1 Find the deviation.** Compare your document with the module template it came from: `git fetch upstream`, then `git diff main upstream/main -- <your file>`. Which template commit is your document missing? Raise an issue for it with the "Training finding" template (on GitHub: **Issues → New issue → Training finding**).
+**5.1 Find the deviation.** Compare your document with the module template it came from: `git fetch upstream`, then `git diff main upstream/main -- <your file>`. Which template commit is your document missing? Raise an issue for it with the "Task (S-CORE form)" form (on GitHub: **Issues → New issue → Task (S-CORE form)**).
 
 **5.2 Update on a branch.** Create a branch from `main`, bring the document to the current template state, commit, push and open a pull request that closes your issue and this one. A template commit can change more than your document: if the build fails after your update, find out from the template commit why, and repair it in the same pull request. **Do not merge it yet.**
 

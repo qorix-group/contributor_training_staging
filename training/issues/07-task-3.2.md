@@ -22,6 +22,6 @@ labels: stage-3
 ---
 The process description defines the process. The S-CORE project decides how it applies to the platform. In `eclipse-score/score`, find what the project decided about your topic **{{ROLE_TOPIC}}**: in the platform management plan (quality, safety or security management), in a design decision, or in a feature's or module's plan.
 
-Then create **one issue** with the "Training finding" template for something you found unclear. It is an open point, so it needs an **owner** (the S-CORE role that can answer it, from the table in `TRAINING.md`) and a **trigger** (the event after which it can be answered). An open point without both is a defect.
+Then create **one issue** with the "Task (S-CORE form)" form for something you found unclear. It is an open point, so it needs an **owner** (the S-CORE role that can answer it, from the table in `TRAINING.md`) and a **trigger** (the event after which it can be answered). An open point without both is a defect.
 
 **Done when** a merged pull request records the finding with its need id or link on your participant page and closes your open-point issue, either with the answer or with the open point recorded there with its owner and trigger.

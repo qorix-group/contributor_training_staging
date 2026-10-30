@@ -64,6 +64,13 @@ Then add the track's defects to the module's documents (one per track is enough,
 A track whose work is not a document, such as testing, also needs its own task texts in `issues/`;
 the setup takes every file there for every track today.
 
+## The S-CORE issue forms
+
+`.github/ISSUE_TEMPLATE/5_Bug.yml` and `4_Task.yml` are copies of the organisation forms in
+`eclipse-score/.github`, so that participants practise the forms S-CORE uses. Each names the commit
+it was copied from. Before a release, compare them with the organisation's current forms and copy
+them again if they changed; keep the two deviations their header states and nothing else.
+
 ## Feedback, bug reports, completed trainings
 
 They arrive as issues in `eclipse-score/contributor_training`, through the forms in

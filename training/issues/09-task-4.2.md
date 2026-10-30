@@ -24,7 +24,7 @@ Pull request #{{PR_R2}} plans the safety work products of the heartbeat feature 
 
 Review it for content. Check every claim against the rule or standard clause it cites. Check every classification against its parent. Check every number for whether anyone can meet it.
 
-- One review comment per finding, and **one issue per finding** with the "Training finding" template.
+- One review comment per finding, and **one issue per finding** with the "Bug (S-CORE form)" form.
 - Finish with a review of type **Comment** that states your decision, as in task 4.1.
 
 **Done when** a pull request of yours fixes the findings, closes their issues and is merged. Close #{{PR_R2}} without merging it.

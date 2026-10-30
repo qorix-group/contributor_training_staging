@@ -26,6 +26,6 @@ The disclaimer in `docs/module/release/release_note.rst` contains the words "but
 - Commit with an explicit pathspec: `git commit -m "<message>" -- docs/`.
 - The commit message says what was wrong and how you checked the fix (build, rendered page).
 
-Then find a **second** typo in the documentation yourself, raise an issue for it yourself (task 1.3): on GitHub, **Issues → New issue → Training finding**. This issue template is in the repository, in `.github/ISSUE_TEMPLATE/training_finding.md`, and fix it in the same or in a second pull request.
+Then find a **second** typo in the documentation yourself, raise an issue for it yourself (task 1.3): on GitHub, **Issues → New issue → Bug (S-CORE form)**, the form S-CORE uses for defects (see `TRAINING.md`, rule 2), and fix it in the same or in a second pull request.
 
 **Done when** your pull requests are merged with green CI and close this issue and yours.

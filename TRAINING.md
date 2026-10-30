@@ -103,11 +103,15 @@ Plan about **five working days**. Every task is an issue in your copy, labelled 
    counts only when a merged pull request mentions it, or when the issue names a merged pull
    request as its result, in its text or in a comment. The continuous improvement issue is the
    exception: it may stay open.
-2. **Some issues you create yourself.** The task tells you when. On GitHub, choose
-   **Issues → New issue → Training finding** (the template is in
-   `.github/ISSUE_TEMPLATE/training_finding.md`) and add the labels `stage-<n>` and your track.
-   An issue must be workable without asking you: what is wrong, where, and how one recognises that
-   it is fixed.
+2. **Some issues you create yourself.** The task tells you when, and which form: on GitHub,
+   **Issues → New issue → Bug (S-CORE form)** for something that is wrong, **Task (S-CORE form)**
+   for something to do. Add the labels `stage-<n>` and your track. These are the forms S-CORE
+   uses, copied from `eclipse-score/.github`: in S-CORE they come from the organisation, but
+   organisation forms and issue types do not reach a copy in a personal account, so your copy
+   carries them itself. An issue must be workable without asking you: what is wrong or to do,
+   where, the rule it breaks with its id, and how one recognises that it is done. Start the title
+   with a word, not with a task number: a title like "2.3 …" counts as a task, not as your
+   finding.
 3. **The commit carries the reasoning.** Say what you checked and what it returned. In S-CORE a
    reviewer reads your pull request without you in the room; the reasoning has to be in it.
 4. **You merge your own pull requests** once CI is green. Nobody reviews your copy: the closed
